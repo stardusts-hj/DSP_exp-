@@ -24,7 +24,7 @@ x3 = A*exp(-a*n*T3).*sin(w*n*T3);
 %% 查看信号的幅度谱和相位谱
 k=0:49;
 W=exp(-2*pi/50);
-X=x1*(exp(-j*pi/25)).^(n'*k);
+X=x1*(exp(-1i*pi/25)).^(n'*k);
 magX=abs(X); %绘制 x(n)的幅度谱
 subplot(3,1,2);stem(magX);title('理想采样信号序列的幅度谱');
 angX=angle(X); %绘制 x(n)的相位谱
@@ -38,7 +38,7 @@ p=8;
 q=8;
 xaa = exp(-(naa-p).^2/q);
 kaa=0:15;
-Xaa = xaa*(exp(-j*pi/8)).^(naa'*kaa);
+Xaa = xaa*(exp(-1i*pi/8)).^(naa'*kaa);
 magXaa=abs(Xaa);
 angXaa=angle(Xaa);
 subplot(3,1,1); stem(naa, xaa,"green"); title("时域");
@@ -66,7 +66,7 @@ for i=5:8
 end
 ncc=0:7;
 kcc=0:7;
-Xcc=xcc*(exp(-j*pi/4)).^(ncc'*kcc);
+Xcc=xcc*(exp(-1i*pi/4)).^(ncc'*kcc);
 magXcc=abs(Xcc);
 angXcc=angle(Xcc);
 subplot(3,1,1); stem(ncc, xcc,"green"); title("时域");
@@ -81,7 +81,7 @@ for i=5:8
 end
 ndd=0:7;
 kdd=0:7;
-Xdd=xdd*(exp(-j*pi/4)).^(ndd'*kdd);
+Xdd=xdd*(exp(-1i*pi/4)).^(ndd'*kdd);
 magXdd=abs(Xdd);
 angXdd=angle(Xdd);
 subplot(3,1,1); stem(ndd, xdd,"green"); title("时域");
@@ -97,8 +97,8 @@ xbb = exp(-alpha*nbb).*sin(2*pi*f*nbb);
 w=randn(1,64);
 ybb = xbb + w;
 kbb=0:63;
-Xbb = xbb*(exp(-j*pi/8)).^(nbb'*kbb);
-Ybb = ybb*(exp(-j*pi/8)).^(nbb'*kbb);
+Xbb = xbb*(exp(-1i*pi/8)).^(nbb'*kbb);
+Ybb = ybb*(exp(-1i*pi/8)).^(nbb'*kbb);
 magXbb=abs(Xbb);
 angXbb=angle(Xbb);
 magYbb=abs(Ybb);
@@ -111,3 +111,41 @@ subplot(2,3,5); stem(kbb, magXbb); title("Y幅值特性");
 subplot(2,3,6); stem(kbb, angXbb); title("Y相位特性");
 
 %% 1.3.4.1 信号序列的产生
+% 理想采用信号序列
+n=0:49;
+A = 444.128;
+Ta=0.001;
+a=50*sqrt(2.0)*pi;
+w=50*sqrt(2.0)*pi;
+xa = A*exp(-a*n*Ta).*sin(w*n*Ta);
+
+%% 单位脉冲序列
+n=0:49;
+xb=zeros(1,50);
+xb(1)=1;close all;
+stem(n,xb);
+
+%% 矩形序列
+n=0:49;
+xc=zeros(1,50);
+for i=1:10
+    xc(i)=1;
+end
+stem(n,xc);
+
+%% 产生两种单位冲激响应
+n=0:49;
+ha=zeros(1,50);
+for i = 1:10
+    ha(i)=1;
+end
+stem(n,ha);
+
+hb=zeros(1,50);
+hb(1)=1; hb(2)=2.5; hb(3)=2.5;  hb(4)=1; close all;
+stem(n, hb);
+
+%% 离散信号、系统和系统响应的分析
+% xb 和 hb 的线性卷积
+y=conv(xb,hb);
+stem(y);
