@@ -149,3 +149,5 @@ stem(n, hb);
 % xb 和 hb 的线性卷积
 y=conv(xb,hb);
 stem(y);
+
+% xc 和 ha 的线性卷积
