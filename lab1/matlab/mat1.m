@@ -143,11 +143,17 @@ stem(n,ha);
 
 hb=zeros(1,50);
 hb(1)=1; hb(2)=2.5; hb(3)=2.5;  hb(4)=1; close all;
-stem(n, hb);
-
+subplot(1,2,1);stem(n, hb);
+% 求出hb的幅频特性
+Hb = hb*(exp(-1i*pi/25)).^(n'*n);
+magHb=abs(Hb);
+subplot(1,2,2);stem(n,magHb);
 %% 离散信号、系统和系统响应的分析
 % xb 和 hb 的线性卷积
-y=conv(xb,hb);
-stem(y);
-
+yb=conv(xb,hb);
+subplot(1,2,1);stem(y);
+nb=0:99;
+Yb=yb*exp(-1i*pi/50).^(nb'*nb);
+magYb=abs(Yb);
+subplot(1,2,3);stem(nb,magYb);
 % xc 和 ha 的线性卷积
