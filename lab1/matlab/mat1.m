@@ -151,9 +151,39 @@ subplot(1,2,2);stem(n,magHb);
 %% 离散信号、系统和系统响应的分析
 % xb 和 hb 的线性卷积
 yb=conv(xb,hb);
-subplot(1,2,1);stem(y);
-nb=0:99;
-Yb=yb*exp(-1i*pi/50).^(nb'*nb);
+subplot(1,2,1);stem(yb);title("yb");
+nb=1:99;
+Yb=yb*(exp(-1i*pi/50)).^(nb'*nb);
 magYb=abs(Yb);
-subplot(1,2,3);stem(nb,magYb);
-% xc 和 ha 的线性卷积
+subplot(1,2,2);stem(nb,magYb);
+%% xc 和 ha 的线性卷积
+yc=conv(xc,ha);
+subplot(1,2,1);stem(yc);title("yc");
+nc=1:99;
+Yc=yc*(exp(-1i*pi/50)).^(nc'*nc);
+magYc=abs(Yc);
+subplot(1,2,2);stem(nc,magYc);title("Yc");
+%% 替换为xa(n)
+n=0:49;
+A = 1;
+Ta=1;
+a=0.4;
+w=2.0734;
+xa = A*exp(-a*n*Ta).*sin(w*n*Ta);
+k=0:49;
+W=exp(-2*pi/50);
+Xa=xa*(exp(-1i*pi/25)).^(n'*k);
+magXa=abs(Xa); %绘制 x(n)的幅度谱
+stem(magXa);title('理想采样信号序列的幅度谱');
+%% 卷积定理的验证
+ya = conv(xa, ha);
+subplot(2,2,1);stem(ya);title("ya");
+Ya=fft(ya);
+na=1:99;
+magYa=abs(Ya);
+subplot(2,2,2);stem(na,magYa);title("Ya");
+
+Ha=fft(ha);
+Yha=Ha.*Xa;
+subplot(2,2,3);stem(abs(Yha));title("Yha 频域相乘");
+subplot(2,2,3);stem()
