@@ -14,30 +14,33 @@ Y=fft(y);
 subplot(2,1,2);stem(t,Y);
 %% f1=1000Hz取样
 n = 0:50;  % 序列的相关长度是51
+A = 444.128;
+a=50*sqrt(2.0)*pi;
+w=50*sqrt(2.0)*pi;
 T1=0.001;
 x1=A*exp(-a*n*T1).*sin(w*n*T1);
-subplot(2,1,1);stem(n,x1);
+subplot(2,1,1);stem(n,x1);title("时域图形");
 k=-25:25;
 W=exp(-1i*pi/12.5);
 X1=x1*(exp(-1i*pi/12.5)).^(n'*k);
 magX1=abs(X1);
-subplot(2,1,2);stem(n,magX1);
+subplot(2,1,2);stem(n,magX1);title("1000Hz采样频域图形");
 %% f2 = 300Hz取样
 T2=1/300;
 x2 = A*exp(-a*n*T2).*sin(w*n*T2);
-subplot(2,1,1);stem(n,x2);
+subplot(2,1,1);stem(n,x2);title("时域图形");
 W=exp(-1i*pi/12.5);
 X2=x2*(exp(-1i*pi/12.5)).^(n'*k);
 magX2=abs(X2);
-subplot(2,1,2);stem(n,magX2);
+subplot(2,1,2);stem(n,magX2);title("300Hz采样频域图形");
 %% f3=200Hz取样 
 T3=1/200;
 x3 = A*exp(-a*n*T3).*sin(w*n*T3);
-subplot(2,1,1);stem(n,x3);
+subplot(2,1,1);stem(n,x3);title("时域图形");
 W=exp(-1i*pi/12.5);
 X3=x3*(exp(-1i*pi/12.5)).^(n'*k);
 magX3=abs(X3);
-subplot(2,1,2);stem(n,magX3);
+subplot(2,1,2);stem(n,magX3);title("200Hz采样频域图形");
 %% 查看信号的幅度谱和相位谱
 k=-25:25;
 W=exp(-1i*pi/12.5);
@@ -51,16 +54,25 @@ subplot(3,1,3);stem(angX) ; title ('理想采样信号序列的相位谱');
 %% 1.3.3.1-4 典型信号序列的产生，时域和幅频、相频特性
 %% 高斯序列
 naa=0:15;
-p=13;   %q=8, p=14时产生频谱泄露
+p=8;   %q=8, p=14时产生频谱泄露
 q=8;
-xaa = exp(-(naa-p).^2/q);
+xaa = exp(-(naa-8).^2/q);
 kaa=0:15;
-Xaa = xaa*(exp(-1i*pi/8)).^(naa'*kaa);
-magXaa=abs(Xaa);
-angXaa=angle(Xaa);
-subplot(3,1,1); stem(naa, xaa,"green"); title("时域");
-subplot(3,1,2); stem(kaa, magXaa); title("幅值特性");
-subplot(3,1,3); stem(kaa, angXaa); title("相位特性");
+subplot(3,2,1); stem(naa, xaa,"green"); title("p=8 时域");
+subplot(3,2,2); stem(kaa, abs(fft(xaa)),"red"); title("p=8 幅值特性");
+
+xaa = exp(-(naa-13).^2/q);
+kaa=0:15;
+subplot(3,2,3); stem(naa, xaa,"green"); title("p=13 时域");
+subplot(3,2,4); stem(kaa, abs(fft(xaa)),"red"); title("p=13 幅值特性");
+
+xaa = exp(-(naa-14).^2/q);
+kaa=0:15;
+subplot(3,2,5); stem(naa, xaa,"green"); title("p=14 时域");
+subplot(3,2,6); stem(kaa, abs(fft(xaa)),"red"); title("p=14 幅值特性");
+
+
+
 %% 衰减正弦序列
 nbb=0:15;
 alpha=0.1;
@@ -68,13 +80,22 @@ f=0.0625;
 % f=0.4375;
 % f=0.5625;
 xbb = exp(-alpha*nbb).*sin(2*pi*f*nbb);
-kbb=0:15;
-Xbb = xbb*(exp(-j*pi/8)).^(nbb'*kbb);
-magXbb=abs(Xbb);
-angXbb=angle(Xbb);
-subplot(3,1,1); stem(nbb, xbb,"green"); title("时域");
-subplot(3,1,2); stem(kbb, magXbb); title("幅值特性");
-subplot(3,1,3); stem(kbb, angXbb); title("相位特性");
+Xbb = fft(xbb);
+subplot(3,2,1); stem(nbb, xbb,"green"); title("f=0.0625 时域");
+subplot(3,2,2); stem(nbb, abs(Xbb),"red"); title("f=0.0625 幅值特性");
+
+f=0.4375;
+xbb1 = exp(-alpha*nbb).*sin(2*pi*f*nbb);
+Xbb1 = fft(xbb1);
+subplot(3,2,3); stem(nbb, xbb1,"green"); title("f=0.4375; 时域");
+subplot(3,2,4); stem(nbb, abs(Xbb1),"red"); title("f=0.4375; 幅值特性");
+
+f=0.5625;
+xbb2 = exp(-alpha*nbb).*sin(2*pi*f*nbb);
+Xbb2= fft(xbb2);
+subplot(3,2,5); stem(nbb, xbb2,"green"); title("f=0.5625; 时域");
+subplot(3,2,6); stem(nbb, abs(Xbb2),"red"); title("f=0.5625; 幅值特性");
+
 %% 三角波序列  
 % matlab 数组下标从1开始
 for i=1:4
@@ -86,11 +107,11 @@ end
 ncc=0:7;
 Xcc=fft(xcc);
 magXcc=abs(Xcc);
-angXcc=angle(Xcc);
-subplot(3,1,1); stem(ncc, xcc,"green"); title("时域");
-subplot(3,1,2); stem(ncc, magXcc); title("幅值特性");
-subplot(3,1,3); stem(ncc, angXcc); title("相位特性");
-%% 反三角序列
+
+subplot(3,2,1); stem(ncc, xcc,"green"); title("8点三角波序列时域");
+subplot(3,2,2); stem(ncc, magXcc,"red"); title("8点三角波序列幅频特性");
+
+% 反三角序列
 for i=1:4
     xdd(i)=5-i;
 end
@@ -101,11 +122,11 @@ ndd=0:7;
 
 Xdd=fft(xdd);
 magXdd=abs(Xdd);
-angXdd=angle(Xdd);
-subplot(3,1,1); stem(ndd, xdd,"green"); title("时域");
-subplot(3,1,2); stem(ndd, magXdd); title("幅值特性");
-subplot(3,1,3); stem(ndd, angXdd); title("相位特性");
-%% 末尾补零 采样更密集了
+
+subplot(3,2,3); stem(ndd, xdd,"green"); title("8点反三角波序列时域");
+subplot(3,2,4); stem(ndd, magXdd,"red"); title("8点反三角波序列幅频特性");
+
+% 末尾补零 采样更密集了
 for i=9:16
     xdd(i)=0;
     xcc(i)=0;
@@ -115,8 +136,8 @@ Xdd=fft(xdd);
 Xcc=fft(xcc);
 magXdd=abs(Xdd);
 magXcc=abs(Xcc);
-subplot(3,1,1); stem(ndd, magXdd,"green"); title("ndd");
-subplot(3,1,2); stem(ndd, magXcc,"red"); title("ncc");
+subplot(3,2,5); stem(ndd, magXcc,"green"); title("16点三角波序列幅频特性");
+subplot(3,2,6); stem(ndd, magXdd,"red"); title("16点反三角波序列幅频特性");
 %% 1.3.3.5 频谱混淆和频谱泄露现象下的噪声信号影响
 % 衰减正弦序列
 nbb=0:63;
