@@ -28,4 +28,35 @@ while(I<NM1)
         I=I+1;
 end
 %% fft变换
+%    采用递归的方法, 外侧循环控制递归次数M=log_{2}N
+%    在每一级的fft中，利用蝶形运算。第K次, a(k, i)和a(k, i+2^(K-1))进行蝶形运算
+%    I 和 IP 是构成蝶形运算的两个节点
+N=8;
+A=randn(1,N);
+L=1;
+M=log2(N);
+while(L<=M)
+    LE=2^L;
+    LE1=LE/2;
+    U=1;
+    W=exp(-1i*pi/LE1);
+    J=1;
+    while(J<=LE1)
+        I=J;
+        while(I<=N)
+            IP=I+LE1;
+            T=A(IP)*U;
+            A(IP)=A(I)-T;
+            A(I)=A(I)+T;
+            I=I+LE;
+        end
+        U=U*W;
+        J=J+1;
+    end
+    L=L+1
+end
+
+
+
+
 
