@@ -58,8 +58,8 @@ while(L<=M)
     L=L+1;
 end
 %% 整个的fft程序
-N=16;
-%a=randn(1,N);
+N=128;
+% a=randn(1,N);
 %高斯序列
 % n=0:15;
 % p=8;   %q=8, p=14时产生频谱泄露
@@ -67,17 +67,32 @@ N=16;
 % a = exp(-(n-8).^2/q);
 % a0=a;
 
-% 衰减正弦序列
-n=0:512;
-alpha=0.1;
-f=0.0625;
-% f=0.4375;
-% f=0.5625;
-a = exp(-alpha*n).*sin(2*pi*f*n);
+
+%矩形序列
+n=0:127;
+a=zeros(1,128);
+for i = 1:10
+    a(i)=1;
+end
 a0=a;
-N=512;
+
+% 衰减正弦序列 512个数
+% n=0:512;
+% alpha=0.1;
+% f=0.0625;
+% % f=0.4375;
+% % f=0.5625;
+% a = exp(-alpha*n).*sin(2*pi*f*n);
+% a0=a;
+% N=512;
+
+
+%%  fft 程序
+
 % 整序部分
-t1=clock; %记录cpu花费时间
+
+%记录cpu花费时间
+tic
 NV2=N/2;
 NM1=N-1;
 J=1;
@@ -122,14 +137,17 @@ while(L<=M)
     end
     L=L+1;
 end
-t2=clock;
-t_udf=etime(t2,t1);
+toc
+t_udf=toc;
+
 subplot(3,1,1);stem(a0);title("输入信号时域");
 subplot(3,1,2);stem(abs(A));title("自编的fft");
-t_f1=clock;
+
+tic
 A_fft=fft(a0);
-t_f2=clock;
-t_fft=etime(t_f2,t_f1);
+toc
+
+t_fft=toc
 subplot(3,1,3);stem(abs(A_fft));title("matlab 自带的fft函数");
 
 
