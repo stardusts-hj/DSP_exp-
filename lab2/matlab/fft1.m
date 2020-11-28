@@ -57,24 +57,24 @@ while(L<=M)
     end
     L=L+1;
 end
-%% 整个的fft程序
-N=128;
+%% 整个的fft程序 定义输入序列
+N=1024;
 % a=randn(1,N);
-%高斯序列
-% n=0:15;
-% p=8;   %q=8, p=14时产生频谱泄露
-% q=8;
-% a = exp(-(n-8).^2/q);
-% a0=a;
+% 高斯序列
+n=0:1023;
+p=512;   %q=8, p=14时产生频谱泄露
+q=300;
+a = exp(-(n-p).^2/q);
+a0=a;
 
 
 %矩形序列
-n=0:127;
-a=zeros(1,128);
-for i = 1:10
-    a(i)=1;
-end
-a0=a;
+% n=0:1023;
+% a=zeros(1,1024);
+% for i = 1:512
+%     a(i)=1;
+% end
+% a0=a;
 
 % 衰减正弦序列 512个数
 % n=0:512;
@@ -87,7 +87,8 @@ a0=a;
 % N=512;
 
 
-%%  fft 程序
+%%  fft 程序 
+% 只接受N为整数的情况 
 
 % 整序部分
 
@@ -146,8 +147,8 @@ subplot(3,1,2);stem(abs(A));title("自编的fft");
 tic
 A_fft=fft(a0);
 toc
-
 t_fft=toc
+
 subplot(3,1,3);stem(abs(A_fft));title("matlab 自带的fft函数");
 
 

@@ -108,7 +108,7 @@ ncc=0:7;
 Xcc=fft(xcc);
 magXcc=abs(Xcc);
 
-subplot(3,2,1); stem(ncc, xcc,"green"); title("8点三角波序列时域");
+subplot(3,2,1); stem(ncc, xcc,"green",""); title("8点三角波序列时域");
 subplot(3,2,2); stem(ncc, magXcc,"red"); title("8点三角波序列幅频特性");
 
 % 反三角序列
@@ -141,25 +141,25 @@ subplot(3,2,6); stem(ndd, magXdd,"red"); title("16点反三角波序列幅频特性");
 %% 1.3.3.5 频谱混淆和频谱泄露现象下的噪声信号影响
 % 衰减正弦序列
 nbb=0:63;
-alpha=0.1;
-f=0.0625;
+alpha=0.05;
+f=0.333;
 xbb = exp(-alpha*nbb).*sin(2*pi*f*nbb);
 % 添加噪声信号w(n)
-w=randn(1,64);
+w=0.05*randn(1,64);
 ybb = xbb + w;
 kbb=0:63;
 Xbb = xbb*(exp(-1i*pi/32)).^(nbb'*kbb);
 Ybb = ybb*(exp(-1i*pi/32)).^(nbb'*kbb);
 magXbb=abs(Xbb);
-angXbb=angle(Xbb);
+
 magYbb=abs(Ybb);
-angYbb=angle(Ybb);
-subplot(2,3,1); stem(nbb, xbb,"green"); title("X时域");
-subplot(2,3,2); stem(kbb, magXbb); title("X幅值特性");
-subplot(2,3,3); stem(kbb, angXbb); title("X相位特性");
-subplot(2,3,4); stem(nbb, xbb,"green"); title("Y时域");
-subplot(2,3,5); stem(kbb, magXbb); title("Y幅值特性");
-subplot(2,3,6); stem(kbb, angXbb); title("Y相位特性");
+
+subplot(2,2,1); stem(nbb, xbb,"green"); title("X时域");
+subplot(2,2,2); stem(kbb, magXbb); title("X幅值特性");
+
+subplot(2,2,3); stem(nbb, ybb,"green"); title("Y时域");
+subplot(2,2,4); stem(kbb, magYbb); title("Y幅值特性");
+
 
 %% 1.3.4.1 信号序列的产生
 % 理想采用信号序列
@@ -173,7 +173,7 @@ xa = A*exp(-a*n*Ta).*sin(w*n*Ta);
 %% 单位脉冲序列
 n=0:49;
 xb=zeros(1,50);
-xb(1)=1;close all;
+xb(1)=1;
 stem(n,xb);
 
 %% 矩形序列
@@ -190,34 +190,55 @@ ha=zeros(1,50);
 for i = 1:10
     ha(i)=1;
 end
-stem(n,ha);
+%stem(n,ha);
+
+n=0:49;
+xb=zeros(1,50);
+xb(1)=1;
+subplot(3,2,1);stem(xb);title("xb时域");
 
 hb=zeros(1,50);
-hb(1)=1; hb(2)=2.5; hb(3)=2.5;  hb(4)=1; close all;
-subplot(1,2,1);stem(n, hb);
+hb(1)=1; hb(2)=2.5; hb(3)=2.5;  hb(4)=1; 
+subplot(3,2,2);stem(n, hb);title("hb时域");
 % 求出hb的幅频特性
 Hb =fft(hb);
 magHb=abs(Hb);
-subplot(1,2,2);stem(n,magHb);
-%% 离散信号、系统和系统响应的分析
+subplot(3,2,3);stem(n,magHb);title("Hb频域");
+% 离散信号、系统和系统响应的分析
 % xb 和 hb 的线性卷积
 yb=conv(xb,hb);
-subplot(1,3,1);stem(yb);title("yb");
+subplot(3,2,4);stem(yb);title("yb时域");
 nb=1:99;
 Yb=fft(yb);
 magYb=abs(Yb);
-subplot(1,3,2);stem(nb,magYb);title("abs(Yb)");
-subplot(1,3,3);stem(magHb);title("abs(Hb)");
+subplot(3,2,5);stem(nb,magYb);title("abs(Yb)");
+subplot(3,2,6);stem(magHb);title("abs(Hb)");
 %% xc 和 ha 的线性卷积
+n=0:49;
+ha=zeros(1,50);
+for i = 1:10
+    ha(i)=1;
+end
+subplot(4,2,1);stem(ha);title("ha时域性质");
+subplot(4,2,2);stem(abs(fft(ha)));title("Ha频域性质");
+n=0:49;
+xc=zeros(1,50);
+for i=1:5
+    xc(i)=1;
+end
+subplot(4,2,3);stem(xc);title("xc时域性质");
+
+subplot(4,2,4);stem(abs(fft(xc)));title("Xc频域性质");
+
 yc=conv(xc,ha);
-subplot(1,3,1);stem(yc);title("yc");
+subplot(4,2,5);stem(yc);title("时域卷积后的序列yc");
 nc=1:99;
 Yc=fft(yc);
 magYc=abs(Yc);
-subplot(1,3,2);stem(nc,magYc);title("Yc");
+subplot(4,2,6);stem(nc,magYc);title("Yc频域");
 Xc=fft(xc);
 HXc=Xc.*Xc;
-subplot(1,3,3);stem(HXc);title("Xc*Hc");
+subplot(4,2,7);stem(abs(HXc));title("Xc*Hc");
 %% 改变宽度
 n=0:49;
 xc5=zeros(1,50);
@@ -239,8 +260,8 @@ subplot(1,3,3);stem(HXc5);title("Xc*Hc");
 n=0:49;
 A = 1;
 Ta=1;
-a=0.4;
-w=2.0734;
+a=0.1;
+w=1.2516;
 xa = A*exp(-a*n*Ta).*sin(w*n*Ta);
 k=0:49;
 W=exp(-2*pi/50);
