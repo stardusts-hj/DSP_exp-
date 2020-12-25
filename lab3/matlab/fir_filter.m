@@ -22,3 +22,10 @@ freqz(b,1);
 
 %% Kaiser窗设计线性相位滤波器
 
+N=40;
+beta=4;
+Window=kaiser(N+1,beta );
+
+
+
+
