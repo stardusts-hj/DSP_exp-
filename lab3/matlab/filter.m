@@ -9,23 +9,23 @@
 
 %% IIR 3.3.1.1 
 
-Fs = 1;  % Sampling Frequency
+Fs = 1*0.5;  % Sampling Frequency
 
 fs = 0.2;         % Stopband 
 fp = 0.3;         % Passband 
 As = 20;          % Stopband Attenuation (dB)
 Ap = 0.8;         % Passband Ripple (dB)
 
-[n, Wn] = cheb1ord(fs, fp, Ap, As, 's');
-[b, a] = cheby1(n, Ap, Wn, 'high', 's');
+[n, Wn] = cheb1ord(fp, fs, Ap, As, 's' );
+[b, a] = cheby1(n, Ap, Wn, 'high','s');
 freqs(b,a);
 [bz,az] = impinvar(b, a, Fs);
-%freqz(bz, az, 512, 1);
+% freqz(bz, az, w);
 
-
+%[H, w]=
 %% IIR 3.3.1.2 Êý×ÖµÍÍ¨ÂË²¨Æ÷
 
-Fs = 1;  % Sampling Frequency
+Fs = 1*0.5;  % Sampling Frequency
 
 fs = 0.3;         % Stopband 
 fp = 0.2;         % Passband 
@@ -37,5 +37,22 @@ Ap = 1;         % Passband Ripple (dB)
 freqs(b,a);
 [bz,az] = impinvar(b, a, 1);
 %[bz,az]=bilinear(b,a,1);
-[H,w] = freqz(bz, az);
+%[H,w] = 
+freqz(bz, az, w);
 %plot(w, abs(H));
+
+%% IIR 3.3.1.3 Êý×Ö´øÍ¨ÂË²¨Æ÷
+
+Fs=1e5*0.5;
+fp1=20e3;
+fp2=30e3;
+fs1=15e3;
+fs2=35e3;
+Ap=1;
+As = 40;
+
+[n, Wn] = buttord([fp1 fp2]/Fs, [fs1 fs2]/Fs, 1, 40);
+[b,a] = butter(n, Wn);
+freqz(b,a);
+
+
