@@ -20,12 +20,16 @@ freqz(b,1);
 
 % 12pi/N 过渡带更宽 ， 但是肩峰和过冲更小
 
-%% Kaiser窗设计线性相位滤波器
+%% Kaiser窗 设计线性相位滤波器
 
 N=40;
 beta=4;
 Window=kaiser(N+1,beta );
+%beta 越大， 旁瓣约矮，但主瓣宽度越大 
 
-
-
-
+% 利用fir1函数设计多个通带阻带
+low=0.2;
+band1=[0.4 0.6];
+band2= 0.8;
+b=fir1(N, [low band1 band2],Window);
+fvtool(b,1);

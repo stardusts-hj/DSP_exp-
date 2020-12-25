@@ -16,13 +16,17 @@ fp = 0.3;         % Passband
 As = 20;          % Stopband Attenuation (dB)
 Ap = 0.8;         % Passband Ripple (dB)
 
-[n, Wn] = cheb1ord(fp, fs, Ap, As, 's' );
-[b, a] = cheby1(n, Ap, Wn, 'high','s');
-freqs(b,a);
-[bz,az] = impinvar(b, a, Fs);
-% freqz(bz, az, w);
+[n, Wn] = cheb1ord(fp, fs, Ap, As);
+[b, a] = cheby1(n, Ap, Wn, 'high');
+fvtool(b,a);
 
-%[H, w]=
+% fir 设计的图形 
+% N不能太小，否则主瓣宽度过大，导致过渡带过宽
+N=18;
+b_fir=fir1(N, fp,'high', blackman(N+1));
+fvtool(b_fir,1);
+
+
 %% IIR 3.3.1.2 数字低通滤波器
 
 Fs = 1*0.5;  % Sampling Frequency
@@ -32,14 +36,15 @@ fp = 0.2;         % Passband
 As = 25;          % Stopband Attenuation (dB)
 Ap = 1;         % Passband Ripple (dB)
 
-[n, Wn] = buttord(fp, fs, Ap, As, 's');
-[b, a] = butter(n, Wn, 's');
-freqs(b,a);
-[bz,az] = impinvar(b, a, 1);
-%[bz,az]=bilinear(b,a,1);
-%[H,w] = 
-freqz(bz, az, w);
-%plot(w, abs(H));
+[n, Wn] = buttord(fp, fs, Ap, As);
+[b, a] = butter(n, Wn);
+fvtool(b,a);
+
+% N=9  fir
+N=9;
+Window=blackman(N+1);
+b_fir=fir1(N, fp, Window);
+fvtool(b_fir, 1);
 
 %% IIR 3.3.1.3 数字带通滤波器
 
@@ -53,6 +58,10 @@ As = 40;
 
 [n, Wn] = buttord([fp1 fp2]/Fs, [fs1 fs2]/Fs, 1, 40);
 [b,a] = butter(n, Wn);
-freqz(b,a);
+fvtool(b,a);
 
-
+%N=15 fir
+N=15;
+Window=blackman(N+1);
+b_fir=fir1(N, [fp1,fp2]/Fs, Window);
+fvtool(b_fir, 1);
