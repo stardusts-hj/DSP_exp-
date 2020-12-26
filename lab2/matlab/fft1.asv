@@ -109,19 +109,6 @@ toc
 t_fft=toc;
 
 subplot(3,1,3);stem(abs(A_fft));title("matlab 自带的fft函数");
-tic
-A_x=FFT_UDF(a0, N);
-toc
-t_xiongwei=toc;
-figure(3);
-stem(abs(A_x));
-%% 熊伟fft
-tic
-A_x=FFT_UDF(a0, N);
-toc
-t_xiongwei=toc;
-figure(3);
-stem(abs(A_x));
 %%  dft
 tic
 a0;
@@ -137,8 +124,8 @@ function x = FFT_UDF( x, N )
 round = log2(N); 
 i = 1;
 j = N/2;
-X_even = x(1:i,1:j);     % 取1到N/2作为偶
-X_odd = x(1:i,j+1:j*2);  %N/2+1 到 N 作为奇
+X_even = x(1:i,1:j);
+X_odd = x(1:i,j+1:j*2);
 x = [X_even + X_odd; X_even-X_odd];
 i = i * 2;
 j = j / 2;
@@ -156,7 +143,7 @@ end
 x = reshape(x, 1, N);
 end
 
-%% 我的FFT
+%% 
 function X = udf_fft(a, N)
 NV2=N/2;
 NM1=N-1;
@@ -202,7 +189,5 @@ while(L<=M)
     end
     L=L+1;
 end
-X=A;
 end
-
 

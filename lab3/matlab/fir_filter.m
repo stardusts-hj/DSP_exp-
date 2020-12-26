@@ -1,6 +1,6 @@
 %% FIR 3.3.2.1 Hanning 窗 线性相位带通滤波器
 
-N=15;
+N=45;
 w1=0.3;
 w2=0.5;
 Window=hanning(N + 1);
