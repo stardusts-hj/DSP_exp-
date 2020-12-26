@@ -9,10 +9,10 @@
 
 %% IIR 3.3.1.1 
 
-Fs = 1*0.5;  % Sampling Frequency
+Fs = 1;  % Sampling Frequency
 
-fs = 0.2;         % Stopband 
-fp = 0.3;         % Passband 
+fs = 0.2*2;         % Stopband 
+fp = 0.3*2;         % Passband 
 As = 20;          % Stopband Attenuation (dB)
 Ap = 0.8;         % Passband Ripple (dB)
 
@@ -22,17 +22,17 @@ fvtool(b,a);
 
 % fir 设计的图形 
 % N不能太小，否则主瓣宽度过大，导致过渡带过宽
-N=18;
+N=24;
 b_fir=fir1(N, fp,'high', blackman(N+1));
 fvtool(b_fir,1);
 
 
 %% IIR 3.3.1.2 数字低通滤波器
 
-Fs = 1*0.5;  % Sampling Frequency
+Fs = 1;  % Sampling Frequency
 
-fs = 0.3;         % Stopband 
-fp = 0.2;         % Passband 
+fs = 0.3*2;         % Stopband 
+fp = 0.2*2;         % Passband 
 As = 25;          % Stopband Attenuation (dB)
 Ap = 1;         % Passband Ripple (dB)
 
@@ -48,11 +48,11 @@ fvtool(b_fir, 1);
 
 %% IIR 3.3.1.3 数字带通滤波器
 
-Fs=1e5*0.5;
-fp1=20e3;
-fp2=30e3;
-fs1=15e3;
-fs2=35e3;
+Fs=1e5;
+fp1=20e3*2;
+fp2=30e3*2;
+fs1=15e3*2;
+fs2=35e3*2;
 Ap=1;
 As = 40;
 
