@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.11)  28 DEC 2020 22:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2020.10.11)  29 DEC 2020 14:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -557,17 +557,17 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write3
 \openout3 = `27_ÂàòÊ¥™ÂÅ•_ÂÆûÈ™å‰∏â.toc'.
 
-
-(d:/Latex/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [1
+ [1
 
 ]
+(d:/Latex/texlive/2020/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
 Underfull \hbox (badness 10000) in paragraph at lines 60--62
 
  []
 
-<figs/iir1.png, id=93, 631.158pt x 293.29575pt>
+<figs/iir1.png, id=92, 631.158pt x 293.29575pt>
 File: figs/iir1.png Graphic file (type png)
 <use figs/iir1.png>
 Package pdftex.def Info: figs/iir1.png  used on input line 68.
@@ -577,62 +577,253 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--89
 
  []
 
-<figs/iir2.png, id=137, 614.295pt x 293.898pt>
+<figs/iir2.png, id=135, 614.295pt x 293.898pt>
 File: figs/iir2.png Graphic file (type png)
 <use figs/iir2.png>
 Package pdftex.def Info: figs/iir2.png  used on input line 95.
 (pdftex.def)             Requested size: 491.43666pt x 235.1187pt.
-[3 <./figs/iir2.png>] (./27_ÂàòÊ¥™ÂÅ•_ÂÆûÈ™å‰∏â.aux) ) 
+[3 <./figs/iir2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 116--119
+
+ []
+
+<figs/iir3.png, id=150, 612.48825pt x 296.307pt>
+File: figs/iir3.png Graphic file (type png)
+<use figs/iir3.png>
+Package pdftex.def Info: figs/iir3.png  used on input line 125.
+(pdftex.def)             Requested size: 489.99127pt x 237.04591pt.
+[4]
+
+Package Listings Warning: Text dropped after begin of listing on input line 134
+.
+
+<figs/fir15.png, id=161, 526.96875pt x 395.22656pt>
+File: figs/fir15.png Graphic file (type png)
+<use figs/fir15.png>
+Package pdftex.def Info: figs/fir15.png  used on input line 146.
+(pdftex.def)             Requested size: 226.59213pt x 169.9441pt.
+<figs/fir45.png, id=162, 526.96875pt x 395.22656pt>
+File: figs/fir45.png Graphic file (type png)
+<use figs/fir45.png>
+Package pdftex.def Info: figs/fir45.png  used on input line 147.
+(pdftex.def)             Requested size: 226.59213pt x 169.9441pt.
+[5 <./figs/iir3.png>]
+<figs/box15.png, id=171, 526.96875pt x 395.22656pt>
+File: figs/box15.png Graphic file (type png)
+<use figs/box15.png>
+Package pdftex.def Info: figs/box15.png  used on input line 154.
+(pdftex.def)             Requested size: 226.59213pt x 169.9441pt.
+<figs/box45.png, id=172, 526.96875pt x 395.22656pt>
+File: figs/box45.png Graphic file (type png)
+<use figs/box45.png>
+Package pdftex.def Info: figs/box45.png  used on input line 155.
+(pdftex.def)             Requested size: 226.59213pt x 169.9441pt.
+<figs/black15.png, id=173, 526.96875pt x 395.22656pt>
+File: figs/black15.png Graphic file (type png)
+<use figs/black15.png>
+Package pdftex.def Info: figs/black15.png  used on input line 156.
+(pdftex.def)             Requested size: 226.59213pt x 169.9441pt.
+<figs/black45.png, id=174, 526.96875pt x 395.22656pt>
+File: figs/black45.png Graphic file (type png)
+<use figs/black45.png>
+Package pdftex.def Info: figs/black45.png  used on input line 157.
+(pdftex.def)             Requested size: 226.59213pt x 169.9441pt.
+ [6 <./figs/fir15.png (PNG copy)> <./figs/fir45.png (PNG copy)>]
+Overfull \hbox (1.80638pt too wide) in paragraph at lines 164--165
+[]\C70/rm/m/n/10.53937/4e Œ \C70/rm/m/n/10.53937/6c ‚ \C70/rm/m/n/10.53937/7e π
+ \C70/rm/m/n/10.53937/67 e \C70/rm/m/n/10.53937/77 |\C70/rm/m/n/10.53937/ff ^^
+L| \OT1/cmr/m/n/10.53937 Blackman\C70/rm/m/n/10.53937/7a ó \C70/rm/m/n/10.53937
+/57 ( \C70/rm/m/n/10.53937/96 ; \C70/rm/m/n/10.53937/5e & \C70/rm/m/n/10.53937/
+8f É \C70/rm/m/n/10.53937/4e : \C70/rm/m/n/10.53937/51 I \C70/rm/m/n/10.53937/6
+e —|\C70/rm/m/n/10.53937/ff ^^L| \C70/rm/m/n/10.53937/6c ‚ \C70/rm/m/n/10.53937
+/7e π \C70/rm/m/n/10.53937/8f É \C70/rm/m/n/10.53937/5c ^^Q|\C70/rm/m/n/10.5393
+7/ff ^^L| \C70/rm/m/n/10.53937/80 ^^L \C70/rm/m/n/10.53937/53 Ê \C70/rm/m/n/10.
+53937/59 ^^V \C70/rm/m/n/10.53937/4e $ \C70/rm/m/n/10.53937/79 Õ \C70/rm/m/n/10
+.53937/7a ó \C70/rm/m/n/10.53937/90 ˝ \C70/rm/m/n/10.53937/67 	 \C70/rm/m/n/10.
+53937/8f É \C70/rm/m/n/10.53937/59 ^^Z \C70/rm/m/n/10.53937/76 Ñ \C70/rm/m/n/10
+.53937/6c ‚ \C70/rm/m/n/10.53937/7e π|\C70/rm/m/n/10.53937/30 ^^B| \C70/rm/m/n/
+10.53937/57 ( \C70/rm/m/n/10.53937/96 ; \C70/rm/m/n/10.53937/5e & \C70/rm/m/n/1
+0.53937/4e 
+|\C70/rm/m/n/10.53937/ff ^^L| \OT1/cmr/m/n/10.53937 blackman\C70/rm/m/n/10.5393
+7/7a ó
+ []
+
+<figs/kaiser.png, id=182, 889.82437pt x 365.86688pt>
+File: figs/kaiser.png Graphic file (type png)
+<use figs/kaiser.png>
+Package pdftex.def Info: figs/kaiser.png  used on input line 171.
+(pdftex.def)             Requested size: 249.14912pt x 102.44202pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.52812> on input line 171.
+<figs/kaiser8.png, id=183, 889.82437pt x 365.86688pt>
+File: figs/kaiser8.png Graphic file (type png)
+<use figs/kaiser8.png>
+Package pdftex.def Info: figs/kaiser8.png  used on input line 172.
+(pdftex.def)             Requested size: 249.14912pt x 102.44202pt.
+[7 <./figs/box15.png (PNG copy)> <./figs/box45.png (PNG copy)> <./figs/black15.
+png (PNG copy)> <./figs/black45.png (PNG copy)>]
+<figs/gaoiir.png, id=197, 889.82437pt x 365.86688pt>
+File: figs/gaoiir.png Graphic file (type png)
+<use figs/gaoiir.png>
+Package pdftex.def Info: figs/gaoiir.png  used on input line 188.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/gaofir.png, id=198, 889.82437pt x 365.86688pt>
+File: figs/gaofir.png Graphic file (type png)
+<use figs/gaofir.png>
+Package pdftex.def Info: figs/gaofir.png  used on input line 189.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/gaoiirgroup.png, id=199, 889.82437pt x 365.86688pt>
+File: figs/gaoiirgroup.png Graphic file (type png)
+<use figs/gaoiirgroup.png>
+Package pdftex.def Info: figs/gaoiirgroup.png  used on input line 190.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/gaofirgroup.png, id=200, 889.82437pt x 365.86688pt>
+File: figs/gaofirgroup.png Graphic file (type png)
+<use figs/gaofirgroup.png>
+Package pdftex.def Info: figs/gaofirgroup.png  used on input line 191.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/diiir.png, id=201, 889.82437pt x 365.86688pt>
+File: figs/diiir.png Graphic file (type png)
+<use figs/diiir.png>
+Package pdftex.def Info: figs/diiir.png  used on input line 197.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/difir.png, id=202, 889.82437pt x 365.86688pt>
+File: figs/difir.png Graphic file (type png)
+<use figs/difir.png>
+Package pdftex.def Info: figs/difir.png  used on input line 198.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/diiirphase.png, id=203, 889.82437pt x 365.86688pt>
+File: figs/diiirphase.png Graphic file (type png)
+<use figs/diiirphase.png>
+Package pdftex.def Info: figs/diiirphase.png  used on input line 199.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/difirphase.png, id=204, 889.82437pt x 365.86688pt>
+File: figs/difirphase.png Graphic file (type png)
+<use figs/difirphase.png>
+Package pdftex.def Info: figs/difirphase.png  used on input line 200.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/diiirpoint.png, id=205, 889.82437pt x 365.86688pt>
+File: figs/diiirpoint.png Graphic file (type png)
+<use figs/diiirpoint.png>
+Package pdftex.def Info: figs/diiirpoint.png  used on input line 204.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+<figs/difirpoint.png, id=206, 889.82437pt x 365.86688pt>
+File: figs/difirpoint.png Graphic file (type png)
+<use figs/difirpoint.png>
+Package pdftex.def Info: figs/difirpoint.png  used on input line 205.
+(pdftex.def)             Requested size: 222.45555pt x 91.46649pt.
+ [8 <./figs/kaiser.png (PNG copy)> <./figs/kaiser8.png (PNG copy)> <./figs/gaoi
+ir.png (PNG copy)> <./figs/gaofir.png (PNG copy)> <./figs/gaoiirgroup.png (PNG 
+copy)> <./figs/gaofirgroup.png (PNG copy)>]
+Overfull \hbox (34.03168pt too wide) in paragraph at lines 219--230
+ [][] 
+ []
+
+[9 <./figs/diiir.png (PNG copy)> <./figs/difir.png (PNG copy)> <./figs/diiirpha
+se.png (PNG copy)> <./figs/difirphase.png (PNG copy)> <./figs/diiirpoint.png (P
+NG copy)> <./figs/difirpoint.png (PNG copy)>]
+Overfull \hbox (44.90268pt too wide) in paragraph at lines 232--233
+| \C70/rm/m/n/10.53937/67 , \C70/rm/m/n/10.53937/6b ! \C70/rm/m/n/10.53937/5b û
+ \C70/rm/m/n/10.53937/9a å|\C70/rm/m/n/10.53937/ff ^^L| \C70/rm/m/n/10.53937/4e
+ ; \C70/rm/m/n/10.53937/89 Å \C70/rm/m/n/10.53937/90 ^^Z \C70/rm/m/n/10.53937/8
+f «\OT1/cmr/m/n/10.53937 matlab\C70/rm/m/n/10.53937/5b û \C70/rm/m/n/10.53937/7
+3 ∞ \C70/rm/m/n/10.53937/4e Ü \C70/rm/m/n/10.53937/5b ˘\OT1/cmr/m/n/10.53937 II
+R\C70/rm/m/n/10.53937/54 å\OT1/cmr/m/n/10.53937 FIR\C70/rm/m/n/10.53937/6e ‰ \C
+70/rm/m/n/10.53937/6c ‚ \C70/rm/m/n/10.53937/56 h \C70/rm/m/n/10.53937/76 Ñ \C7
+0/rm/m/n/10.53937/8b æ °|\C70/rm/m/n/10.53937/30 ^^B| \C70/rm/m/n/10.53937/52 )
+ \C70/rm/m/n/10.53937/75 (\OT1/cmr/m/n/10.53937 maltab\C70/rm/m/n/10.53937/76 Ñ
+\OT1/cmr/m/n/10.53937 fadtool|\C70/rm/m/n/10.53937/30 ^^A| \OT1/cmr/m/n/10.5393
+7 fir1|\C70/rm/m/n/10.53937/30 ^^A| \C70/rm/m/n/10.53937/4e Â \C70/rm/m/n/10.53
+937/53  \OT1/cmr/m/n/10.53937 Butterworh,Chebyshev\C70/rm/m/n/10.53937/7b I
+ []
+
+
+Overfull \hbox (8.27791pt too wide) in paragraph at lines 236--237
+[]\C70/rm/m/n/10.53937/54 ^^L \C70/rm/m/n/10.53937/65 ˆ|\C70/rm/m/n/10.53937/ff
+ ^^L| \C70/rm/m/n/10.53937/4e _ \C70/rm/m/n/10.53937/5b ˘ \C70/rm/m/n/10.53937/
+6b ‘ \C70/rm/m/n/10.53937/52 ^^F \C70/rm/m/n/10.53937/67 ê \C70/rm/m/n/10.53937
+/4e Ü\OT1/cmr/m/n/10.53937 FIR\C70/rm/m/n/10.53937/54 å\OT1/cmr/m/n/10.53937 II
+R\C70/rm/m/n/10.53937/76 Ñ \C70/rm/m/n/10.53937/4f ^^X \C70/rm/m/n/10.53937/7f 
+: \C70/rm/m/n/10.53937/70 π|\C70/rm/m/n/10.53937/ff ^^L| \OT1/cmr/m/n/10.53937 
+FIR\C70/rm/m/n/10.53937/53 Ô \C70/rm/m/n/10.53937/4e Â \C70/rm/m/n/10.53937/5b 
+û \C70/rm/m/n/10.53937/73 ∞ \C70/rm/m/n/10.53937/7e ø \C70/rm/m/n/10.53937/60 '
+ \C70/rm/m/n/10.53937/76 ¯ \C70/rm/m/n/10.53937/4f M|\C70/rm/m/n/10.53937/ff ^^
+L| \C70/rm/m/n/10.53937/4f F \C70/rm/m/n/10.53937/66 / \C70/rm/m/n/10.53937/62 
+@ \C70/rm/m/n/10.53937/97 ^^@ \C70/rm/m/n/10.53937/96 6 \C70/rm/m/n/10.53937/65
+ p \C70/rm/m/n/10.53937/8f É \C70/rm/m/n/10.53937/59 ^^Z|\C70/rm/m/n/10.53937/f
+f ^^L| \C70/rm/m/n/10.53937/5e E \C70/rm/m/n/10.53937/98 ë \C70/rm/m/n/10.53937
+/54 Õ \C70/rm/m/n/10.53937/5e î \C70/rm/m/n/10.53937/96 æ \C70/rm/m/n/10.53937/
+4e Â \C70/rm/m/n/10.53937/8c ^^C \C70/rm/m/n/10.53937/65 t|\C70/rm/m/n/10.53937
+/ff ^^L| \OT1/cmr/m/n/10.53937 IIR\C70/rm/m/n/10.53937/66 /
+ []
+
+[10] (./27_ÂàòÊ¥™ÂÅ•_ÂÆûÈ™å‰∏â.aux) ) 
 Here is how much of TeX's memory you used:
- 9511 strings out of 480608
- 161436 string characters out of 5904589
- 588381 words of memory out of 5000000
- 25064 multiletter control sequences out of 15000+600000
- 563693 words of font info for 138 fonts, out of 8000000 for 9000
+ 10309 strings out of 480608
+ 173110 string characters out of 5904589
+ 588213 words of memory out of 5000000
+ 25732 multiletter control sequences out of 15000+600000
+ 580573 words of font info for 200 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,8n,59p,509b,2180s stack positions out of 5000i,500n,10000p,200000b,80000s
-<c:/Windows/Fonts/simhei.
-ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts
-/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windo
+ 46i,9n,59p,509b,1708s stack positions out of 5000i,500n,10000p,200000b,80000s
+<c:/Windows/Fonts/simsun.ttc><c:/Windows/F
+onts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
+indows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.t
+tf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/
+simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Window
+s/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c
+:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhe
+i.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fon
+ts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Win
+dows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc
+><c:/Windows/Fonts/simsun.ttc>{d:/Latex/texlive/2020/texmf-dist/fonts/enc/dvips
+/cm-super/cm-super-ts1.enc}<c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsu
+n.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fon
+ts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Win
+dows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf
+><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/si
+msun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/
+Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/
+Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.
+ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts
+/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windo
 ws/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><
-c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sims
-un.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fo
-nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wi
-ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc>{d:/Latex/texlive/2020/texm
-f-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/Windows/Fonts/simsun.ttc><
-c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simh
+c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simh
 ei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fo
 nts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Wi
-ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.tt
-f><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/s
+ndows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.tt
+c><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/s
 imsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows
 /Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:
-/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei
-.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Font
-s/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Wind
-ows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf>
-<c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/sim
+/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun
+.ttc><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Font
+s/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Wind
+ows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simhei.ttf>
+<c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/simhei.ttf><c:/Windows/Fonts/sim
 sun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/F
 onts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/W
 indows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.t
 tc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/
-simsun.ttc><c:/Windows/Fonts/simsun.ttc><d:/Latex/texlive/2020/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmbx10.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi10.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr5.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr7.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmss1
-0.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><
-d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><d:/
-Latex/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb>
-Output written on 27_ÂàòÊ¥™ÂÅ•_ÂÆûÈ™å‰∏â.pdf (3 pages, 438762 bytes).
+simsun.ttc><c:/Windows/Fonts/simsun.ttc><c:/Windows/Fonts/simsun.ttc><d:/Latex/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/Latex/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/Latex/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><d:/Latex/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><d:/Latex/texlive/2020/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><d:/Latex/texlive/2020/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><d:/Latex/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/Latex/texlive/2020/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmr5.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr7.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmss10.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy10.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt10.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/cm-su
+per/sfrm1000.pfb><d:/Latex/texlive/2020/texmf-dist/fonts/type1/public/cm-super/
+sfss1000.pfb>
+Output written on 27_ÂàòÊ¥™ÂÅ•_ÂÆûÈ™å‰∏â.pdf (10 pages, 1306875 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
+ 598 PDF objects out of 1000 (max. 8388607)
+ 377 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 203 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 362 words of extra memory for PDF output out of 10000 (max. 10000000)
 
